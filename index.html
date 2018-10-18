@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
+
+<script>
+
+	var username;
+
+	altspace.getUser()
+	.then(function(user){
+		username = user.displayName;
+		responsiveVoice.speak("Hello " + username, "UK English Male");
+	})
+	.catch(function(error){
+		console.log(error);
+	});
+
+</script>
