@@ -39,7 +39,7 @@
 
 	function buttonClicked(){
 		altText = document.getElementById("tts").value;
-		database().ref("text").set({
+		firebase.database().ref("text").set({
 			text: altText
 		});
 		responsiveVoice.speak(altText);
